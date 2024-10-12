@@ -22,6 +22,11 @@
         transform: translate(-50%, -50%); /* Center the circle */
         transition: transform 0.1s ease-out; /* Smooth movement */
     }
+    :root {
+    --text-color-light: #333; /* Dark text for light mode */
+    --text-color-dark: #fff; /* White text for dark mode */
+   
+}
 </style>
   <script type="text/javascript">
     (function () {
@@ -86,7 +91,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/test-style.css">
-
+<link rel="stylesheet" href="stay_connect.css">
   <!-- Preloader CSS-->
   <link rel="stylesheet" href="assets/css/preloader.css">
   <script src="https://cdn.lordicon.com/lordicon.js"></script>
@@ -108,7 +113,7 @@
   position: sticky !important;
   align-items: center;
   justify-content: space-between;
-  margin-left: -4.7rem; 
+  margin-left: -18rem; 
   /* margin-left: 5rem; */
 }
 
@@ -1020,16 +1025,19 @@
 .map-container:hover {
   transform: scale(0.95); /* Shrinks the container to 95% of its size */
 }
-
+ 
 .contact-form input,
   .contact-form textarea {
+
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #8f8d8d;
+    border:  1px solid #ffcfcf;
     border-radius: 5px;
     font-size: 14px;
+
   }
+
   .contact:hover {
     transform: scale(1.02); /* Slightly enlarge on hover */
   }
@@ -1352,15 +1360,21 @@ body > .skiptranslate {
   height: 300px; /* Fixed height for map */
   margin-top: 20px; /* Space above map */
 }
+
 .contact-form input,
   .contact-form textarea {
+
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #8f8d8d;
+    border:  1px solid #ffcfcf;
+    border: 1px solid #ffcfcf;
+    background-color: #eeb9b9;
     border-radius: 5px;
     font-size: 14px;
+
   }
+
   .contact:hover {
     transform: scale(1.02); /* Slightly enlarge on hover */
   }
@@ -1520,7 +1534,7 @@ iframe {
 
         <ul class="navbar-list nav">
           <a href="index.html" onclick="lenis.scrollTo('index.html');" class="logo" style="display:flex;">
-            <img src="./assets/images/final.png" class="logopic" style=" width: 15rem; margin:0px 0px 0px 0px;">
+            <img src="./assets/images/final.png" class="logopic" style=" width: 15rem; margin:0px 0px 0px -10px;">
           </a>
           <li class="navbar-item">
             <a href="#home" onclick="lenis.scrollTo('#home')" class="navbar-link" data-nav-link><i
@@ -1675,6 +1689,7 @@ iframe {
           navbar_con.classList.toggle('nav_activated');
         });
       </script>
+      
    
     <script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
     <div className="wrapper col-md-3 col-12" style= "justify-Content: 'center'; display: 'flex'">
@@ -1794,7 +1809,10 @@ iframe {
           <div class="hero-content">
             <p class="section-subtitle"> Let's Exchange Old Books and Discover New Stories Together!</p>
 
-            <h1 class="h1 hero-title" style="color: rgb(255, 255, 255);">SwapReads.com - Where Books Find New Adventures!</h1>
+           
+            
+            <h1 class="h1 hero-title" style="color: var(--text-color);">SwapReads.com - Where Books Find New Adventures!</h1>
+
 
             <p class="section-text " >
               Join SwapReads.com, the ultimate online community for book enthusiasts! Create your profile, list your
@@ -1866,6 +1884,7 @@ iframe {
             
               </div>
             </li>
+            
 
             <li class="canvas">
               <div class="benefits-card has-before has-after">
@@ -1947,7 +1966,7 @@ iframe {
 
                   <ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
                 </a> -->
-                <a href="#" class="cta style-9">
+                <a href="./revitalize.html" class="cta style-9">
                   <span>Read More</span>
                   <svg width="1.3rem" height="1rem" viewBox="0 0 13 10">
                     <path d="M1,5 L11,5"></path>
@@ -3093,7 +3112,7 @@ iframe {
 }
 
 #rate-us:hover {
-  background-color: #fde2e2;  
+  background-color: #A30F17;  
   color: white;  
 } /* Closing brace for #rate-us:hover */
 
@@ -3859,16 +3878,24 @@ iframe {
 }
 </script>-->
         <div class="foot-right">
-        <h2 style="margin-bottom: 2.4rem; margin-top:0.5rem;">Stay Connected</h2>
-        <form id="newsform" onsubmit="return showConfirmationMessage();">
-            <label for="new-email" class="news-form">Subscribe to our Newsletter</label>
-            <div class="row-flex display-flex">
-                <input class="finput" type="email" id="new-email" name="email" placeholder="Email address"
-                      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\.com$"
-                      title="Please enter a valid email address that ends with '.com'" required>
-                <input type="submit" value="Subscribe" name="subscribe" class="subscribe" id="subs">
-            </div>
-        </form>
+          
+     <div id="stay_connect">
+    <h2 style="margin-bottom: 2.4rem; margin-top: 0.5rem;">Stay Connected</h2>
+    <form id="newsform" onsubmit="return showConfirmationMessage();">
+        <label for="subscriber-name" class="news-form">Your Name</label>
+        <input class="finput" type="text" id="subscriber-name" name="name" placeholder="Your Name" required>
+
+        <label for="new-email" class="news-form">Subscribe to our Newsletter</label>
+        <div class="row-flex display-flex">
+            <input class="finput" type="email" id="new-email" name="email" placeholder="Email address"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\.com$"
+                title="Please enter a valid email address that ends with '.com'" required>
+            <input type="submit" value="Subscribe" name="subscribe" class="subscribe" id="subs">
+        </div>
+    </form>
+</div>
+
+
         <div id="confirmationmessage" style="display: none;">Thank you for subscribing!</div>
         <div class="icons">
           <!-- Discord icon -->
@@ -4494,6 +4521,7 @@ count=0
   // Start the animation
   animateCircles();
 </script>
+
 </body>
 
 </html>
